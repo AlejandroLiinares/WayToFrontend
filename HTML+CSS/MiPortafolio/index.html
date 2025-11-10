@@ -53,6 +53,20 @@
 
     <video autoplay muted src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
         
+    <dialog id="dialog">
+        <h1>¿Sabías que puedes abrir un modal de esta manera?</h1>
+        <p>Y es totalmente nativo</p>
+        <button id="close">Cerrar modal</button>
+    </dialog>
+
+    <button id="show">Ver más información</button>
+
+    <script>
+        window.show.addEventListener('click', () => {
+            window.dialog.showModal()
+        })
+    </script>
+
     <main>
 
         <p>Un año de experiencia práctica como Desarrollador Full-Stack,<strong> 

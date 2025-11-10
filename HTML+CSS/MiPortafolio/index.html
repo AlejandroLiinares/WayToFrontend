@@ -1,90 +1,133 @@
+<!-- Indica que el documento sigue el estándar HTML5 -->
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portafolio Alejandro Linares | Desarrollador de Software especializado en Frontend</title>
+<!-- Tip: siempre coloca esta línea al inicio para asegurar compatibilidad moderna -->
 
-        <meta name="description" content="Portafolio de Alejandro Linares, desarrollador de Software 
-        especializado en Frontend y con sólidas bases en Backend">
+<html lang="en">
+<!-- Define el idioma principal del contenido -->
+<!-- Tip: cambia “en” a “es” si el sitio es principalmente en español -->
+
+    <head>
+        <!-- Contiene metadatos y configuraciones del documento -->
+        <!-- Tip: nada dentro del head se renderiza visualmente -->
+
+        <meta charset="UTF-8">
+        <!-- Define el conjunto de caracteres, evita errores con tildes y símbolos -->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Asegura diseño adaptable a móviles -->
+
+        <title>Portafolio Alejandro Linares | Desarrollador de Software especializado en Frontend</title>
+        <!-- Define el título de la pestaña del navegador -->
+
+        <meta name="description" content="Portafolio de Alejandro Linares, desarrollador de Software especializado en Frontend y con sólidas bases en Backend">
+        <!-- Breve descripción del sitio para motores de búsqueda -->
 
         <meta property="og:title" content="Portfolio de un desarrollador de Software">
-        <meta property="og:description" content="Portafolio de Alejandro Linares, desarrollador de Software 
-        especializado en Frontend y con sólidas bases en Backend">
+        <meta property="og:description" content="Portafolio de Alejandro Linares, desarrollador de Software especializado en Frontend y con sólidas bases en Backend">
         <meta property="og:image" content="/image.png">
         <meta property="og:image:alt" content="Fotografía de Alejandro Linares">
+        <!-- Etiquetas Open Graph: optimizan la vista previa al compartir en redes sociales -->
 
         <link rel="alternate" href="https://alejandrolinares.dev/en" hreflang="es-GB">
-        <link rel="cannonical" href="https://alejandrolinares.dev">
+        <link rel="canonical" href="https://alejandrolinares.dev">
+        <!-- Indican versiones alternativas y la URL oficial de la página -->
 
         <meta name="robots" content="index, follow">
+        <!-- Permite que buscadores indexen y sigan los enlaces -->
+
         <meta name="theme-color" content="#09f">
+        <!-- Personaliza el color de la barra superior del navegador en móviles -->
 
         <link rel="icon" type="image/png" href="/HTML+CSS/MiPortafolio/image/yo.png">
+        <!-- Define el ícono de la pestaña -->
 
         <style>
             body {
                 background: #fff;
             }
         </style>
-
+        <!-- Tip: para proyectos reales, usa un archivo CSS externo -->
     </head>
 
 <body>
-    <header>
-        <h1> Protafolio de Alejandro Linares</h1>
+<!-- Cuerpo principal visible de la página -->
+<!-- Tip: todo lo que el usuario ve va dentro del body -->
 
+    <!-- Encabezado principal del sitio -->
+    <header>
+        <h1>Portafolio de Alejandro Linares</h1>
+
+        <!-- Inserta un video de YouTube responsivo -->
         <iframe style="width: 100%; aspect-ratio:16/9;" 
         src="https://www.youtube.com/embed/3nYLTiY5skU?si=JUq4YCFtdXcwjX3O" 
         title="YouTube video player" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
-        picture-in-picture; web-share" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- Tip: usa aspect-ratio para mantener proporciones y evitar desbordes -->
 
+        <!-- Navegación del sitio -->
         <nav>
             <a href="#experiencia">Experiencia</a>
             <a href="#proyectos">Proyectos Realizados</a>
-            <a href="https://www.linkedin.com/in/alejandroliinares/"
-            target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://www.github.com/alejandroliinares"
-            target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/alejandroliinares/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://www.github.com/alejandroliinares" target="_blank" rel="noreferrer">GitHub</a>
         </nav>
+        <!-- Tip: usa enlaces con texto descriptivo, no genérico como “clic aquí” -->
     </header>  
 
+    <!-- Inserta un video local o remoto -->
     <video autoplay muted src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
-        
+    <!-- Tip: usa atributos muted y autoplay juntos para evitar bloqueos del navegador -->
+
+    <!-- Modal nativo del navegador -->
     <dialog id="dialog">
         <h1>¿Sabías que puedes abrir un modal de esta manera?</h1>
         <p>Y es totalmente nativo</p>
         <button id="close">Cerrar modal</button>
     </dialog>
+    <!-- Tip: personalízalo con CSS, pero evita abusar del dialog para cosas complejas -->
 
+    <!-- Botón para abrir el modal -->
     <button id="show">Ver más información</button>
+    <!-- Tip: usa nombres de id que indiquen acción o propósito -->
 
+    <!-- Script que controla la interacción del modal -->
     <script>
-        window.show.addEventListener('click', () => {
-            window.dialog.showModal()
-        })
+        const showButton = document.getElementById('show');
+        const dialog = document.getElementById('dialog');
+        const closeButton = document.getElementById('close');
+
+        showButton.addEventListener('click', () => {
+            dialog.showModal();
+        });
+
+        closeButton.addEventListener('click', () => {
+            dialog.close();
+        });
     </script>
+    <!-- Tip: coloca los scripts al final del body para mejorar la carga inicial -->
 
+    <!-- Contenido principal del sitio -->
     <main>
+        <p>Un año de experiencia práctica como Desarrollador Full-Stack,<strong> especializado en FrontEnd</strong> desarrollando proyectos reales y funcionales, con una visión constante de aprendizaje.</p>
+        <!-- Tip: evita párrafos excesivamente largos, usa <strong> solo para resaltar palabras clave -->
 
-        <p>Un año de experiencia práctica como Desarrollador Full-Stack,<strong> 
-        especializado en FrontEnd</strong> desarrollando proyectos reales y 
-        funcionales, con una vision constante de aprendizaje.</p>
-        
         <h2 id="experiencia">Experiencia</h2>
 
         <ul>
             <li class="list-item">Iwie Drones</li>
         </ul>
+        <!-- Tip: las listas deben tener más de un elemento para mantener sentido semántico -->
 
+        <!-- Imagen del autor -->
         <img id="photo-image" width="220" height="210" title="Photo de Alejandro Linares"
         alt="Una fotografía de Alejandro Linares posando y mirando a cámara" 
         src="/HTML+CSS/MiPortafolio/image/yo.png">
+        <!-- Tip: siempre agrega atributos alt descriptivos para accesibilidad -->
 
         <h2 id="proyectos">Proyectos realizados</h2>
 
+        <!-- Información complementaria al contenido principal -->
         <aside>
             <header>
                 <h3>Mis tecnologías favoritas</h3>
@@ -97,32 +140,29 @@
                 <li>Python</li>
             </ul>
         </aside>
+        <!-- Tip: usa aside para contenido relacionado, pero no esencial -->
 
+        <!-- Sección con proyectos -->
         <section>
             <article>
                 <header>
                     <h4>Página de Fortnite</h4>
                 </header>
-                <p>
-                    Epic Games me llamo y en una tarde hice toda esta página desde 
-                    cero
-                </p>
+                <p>Epic Games me llamó y en una tarde hice toda esta página desde cero</p>
                 <img 
                 style="width: 100%; aspect-ratio:953/438;"
                 loading="lazy"
                 src="/HTML+CSS/MiPortafolio/image/fortnite.png" 
                 alt="Cáptura de pantalla de la página web de Fortnite">
             </article>
+
             <article>
                 <header>
                     <h4>Un Millón de Traumas</h4>
                 </header>
-                    <p>
-                        Estética y promoción de mi autobiografía novelada. 
-                    </p>
+                <p>Estética y promoción de mi autobiografía novelada.</p>
                 <footer>
-                    <small>React (JavaScript), Youtube Music API y Microservicio 
-                        de Back online</small>
+                    <small>React (JavaScript), Youtube Music API y Microservicio de Back online</small>
                 </footer>
             </article>
 
@@ -130,10 +170,7 @@
                 <header>
                     <h4>Clínica Digital de Gestión de Partos</h4>
                 </header>
-                    <p>
-                        Clinica con procesos de gestión de partos de recién nacidos 
-                        digitalizada para la fácil exportación de reportes
-                    </p>
+                <p>Clínica con procesos digitalizados para exportación de reportes.</p>
                 <footer>
                     <small>React (JavaScript), Django (API REST), Scrum</small>
                 </footer>
@@ -143,45 +180,36 @@
                 <header>
                     <h4>Iwie Drones</h4>
                 </header>
-                    <p>
-                        Página web desarrollada en dúo para la promoción del 
-                        catálogo de drones de la empresa.
-                    </p>
+                <p>Página desarrollada en dúo para promover el catálogo de drones.</p>
                 <footer>
                     <small>React e Inteligencia Artificial</small>
                 </footer>
             </article>
         </section>
+        <!-- Tip: usa article para contenido independiente que podría publicarse por sí solo -->
 
+        <!-- Sección de preguntas frecuentes -->
         <section>
-            <h2>Preguntas fercuentes</h2>
+            <h2>Preguntas frecuentes</h2>
 
             <details>
                 <summary>¿Qué estudios tienes?</summary>
-                <p>Actualmente me encuentro estudiando mi carrera
-                    como Ingeniero en Informática con un título 
-                    como <strong>analista programador</strong>.
-                </p>
+                <p>Actualmente estudio Ingeniería en Informática con título de <strong>analista programador</strong>.</p>
             </details>
 
             <details>
-                <summary>Qué te inspiró a convertirte en progamador?</summary>
-                <p>Las ganas y la inspiración de crear proyectos de 
-                    Software conectando las ideas con la realidad 
-                    convirtiendolas en toda una <strong>experiencia
-                        memorable para el usuario.</strong>
-                </p>
+                <summary>¿Qué te inspiró a convertirte en programador?</summary>
+                <p>La inspiración de crear proyectos que transforman ideas en experiencias memorables.</p>
             </details>
 
             <details>
                 <summary>¿Cuál es tu tecnología favorita?</summary>
-                <p>Sin duda alguna <strong>React</strong>, por su 
-                    facilidad para combinar flujos de componentes 
-                    añadiendo estética dinámica. 
-                </p>
+                <p>Sin duda <strong>React</strong>, por su estructura de componentes reutilizables y dinámica.</p>
             </details>
         </section>
+        <!-- Tip: usa details para desplegar información secundaria sin recargar la interfaz -->
 
+        <!-- Formulario de contacto -->
         <section>
             <h2>Formulario de contacto</h2>
 
@@ -190,20 +218,11 @@
                     <legend>Información Personal</legend>
 
                     <label style="display: block;">Nombre: 
-                    <input 
-                        type="text" 
-                        name="name" 
-                        placeholder="Alejandro Linares"
-                        required
-                    >
+                        <input type="text" name="name" placeholder="Alejandro Linares" required>
                     </label>
+
                     <label>Correo: 
-                    <input 
-                        type="email" 
-                        name="email" 
-                        placeholder="alejandrolinaresnt@gmail.com"
-                        required
-                    >
+                        <input type="email" name="email" placeholder="alejandrolinaresnt@gmail.com" required>
                     </label>
                 </fieldset>
 
@@ -211,12 +230,7 @@
                     <legend>Información Adicional</legend>
 
                     <label>Teléfono: 
-                    <input 
-                        type="tel" 
-                        name="phone" 
-                        placeholder="Alejandro Linares"
-                        required
-                    >
+                        <input type="tel" name="phone" placeholder="+569 72309444" required>
                     </label>
                 </fieldset>
 
@@ -233,7 +247,7 @@
                     </div>
 
                     <div>
-                        <label for="terms">Aceptas los términos?</label>
+                        <label for="terms">¿Aceptas los términos?</label>
                         <input type="checkbox" name="terms" id="terms" required>
                     </div>
 
@@ -245,24 +259,24 @@
                             <option value="Python"></option>
                         </datalist>
                         <label>
-                            ¿Con que lenguaje de programación quieres
-                            que te ayude?
+                            ¿Con qué lenguaje de programación quieres que te ayude?
                             <input list="languajes" name="languajes">
                         </label>
                     </div>
-
                 </fieldset>
-                <button>Envíar contácto</button>
+
+                <button>Enviar contacto</button>
             </form>
         </section>
-
+        <!-- Tip: agrupa los campos en fieldset y usa labels asociadas para accesibilidad -->
     </main>
 
+    <!-- Pie de página del sitio -->
     <footer>
         Copyright © 2025 El portfolio hecho con más pasión
-
         <a href="mailto:alejandrolinaresnt@gmail.com">Envíame un correo</a>
         <a href="tel:+56972309444">Llámame</a>
     </footer>
+    <!-- Tip: el footer debe contener información final o enlaces de contacto -->
 </body>
 </html>

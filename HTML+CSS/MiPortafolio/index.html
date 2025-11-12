@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
-
 <html lang="en">
 
     <head>
+
         <meta charset="UTF-8">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +11,7 @@
         <title>Portafolio Alejandro Linares | Desarrollador de Software especializado en Frontend</title>
         <!-- Define el título de la pestaña del navegador -->
 
-        <meta name="description" content="Portafolio de Alejandro Linares, desarrollador de Software especializado en Frontend y con sólidas bases en Backend">
+        <meta name="description" content="Portafolio de Alejandro Linares, desarrollador de Software especializado en Frontend">
         <!-- Breve descripción del sitio para motores de búsqueda -->
 
         <meta property="og:title" content="Portfolio de un desarrollador de Software">
@@ -25,21 +24,43 @@
         <!-- Indican versiones alternativas y la URL oficial de la página -->
 
         <meta name="robots" content="index, follow">
+        <!-- Permite que buscadores indexen y sigan los enlaces -->
 
         <meta name="theme-color" content="#09f">
+        <!-- Personaliza el color de la barra superior del navegador en móviles -->
 
-        <link rel="icon" type="image/png" href="/HTML+CSS/MiPortafolio/image/yo.png">
+        <link rel="icon" type="image/png" href="/image/deriva.png">
         <!-- Define el ícono de la pestaña -->
 
         <style>
             body {
-                background: #fff;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
+                'Helvetica Neue', sans-serif;
+            }
+
+             h1 { /*Siempre intenta acceder al maximo numero de elementos que encuentre */
+               /* color: blue /*Toda esta línea es una declaración*/
+               color: hsl(0, 100%, 50%);
+            }
+
+            .link {
+                color: rgb(60, 180, 9);
+            }
+
+            #show {
+                background: rgb(60, 180, 9);
+                color: white;
+                border: 0;
+            }
+
+            .description {
+                border: 5px solid red;
             }
         </style>
     </head>
 
 <body>
-<!-- Tip: todo lo que el usuario ve va dentro del body -->
 
     <header>
         <h1>Portafolio de Alejandro Linares</h1>
@@ -50,16 +71,16 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+        <!-- Navegación del sitio -->
         <nav>
-            <a href="#experiencia">Experiencia</a>
-            <a href="#proyectos">Proyectos Realizados</a>
-            <a href="https://www.linkedin.com/in/alejandroliinares/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://www.github.com/alejandroliinares" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="link" href="#experiencia">Experiencia</a>
+            <a class="link" href="#proyectos">Proyectos Realizados</a>
+            <a class="link" href="https://www.linkedin.com/in/alejandroliinares/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="link" href="https://www.github.com/alejandroliinares" target="_blank" rel="noreferrer">GitHub</a>
         </nav>
     </header>  
 
     <video autoplay muted src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
-    <!-- Tip: usa atributos muted y autoplay juntos para evitar bloqueos del navegador -->
 
     <!-- Modal nativo del navegador -->
     <dialog id="dialog">
@@ -67,10 +88,9 @@
         <p>Y es totalmente nativo</p>
         <button id="close">Cerrar modal</button>
     </dialog>
-    <!-- Tip: personalízalo con CSS, pero evita abusar del dialog para cosas complejas -->
 
+    <!-- Botón para abrir el modal -->
     <button id="show">Ver más información</button>
-    <!-- Tip: usa nombres de id que indiquen acción o propósito -->
 
     <script>
         const showButton = document.getElementById('show');
@@ -87,21 +107,20 @@
     </script>
     <!-- Tip: coloca los scripts al final del body para mejorar la carga inicial -->
 
-    <!-- Contenido principal del sitio -->
     <main>
-        <p>Un año de experiencia práctica como Desarrollador Full-Stack,<strong> especializado en FrontEnd</strong> 
-            desarrollando proyectos reales y funcionales, con una visión constante de aprendizaje.</p>
+        <p class="description">Un año de experiencia práctica como Desarrollador Full-Stack,<strong> especializado en FrontEnd</strong> desarrollando proyectos reales y funcionales, con una visión constante de aprendizaje.</p>
+
         <h2 id="experiencia">Experiencia</h2>
 
         <ul>
+            <li class="list-item">Roraimax</li>
             <li class="list-item">Iwie Drones</li>
         </ul>
         <!-- Tip: las listas deben tener más de un elemento para mantener sentido semántico -->
 
-        <!-- Imagen del autor -->
         <img id="photo-image" width="220" height="210" title="Photo de Alejandro Linares"
         alt="Una fotografía de Alejandro Linares posando y mirando a cámara" 
-        src="/HTML+CSS/MiPortafolio/image/yo.png">
+        src="/image/deriva.png">
         <!-- Tip: siempre agrega atributos alt descriptivos para accesibilidad -->
 
         <h2 id="proyectos">Proyectos realizados</h2>
@@ -121,7 +140,6 @@
         </aside>
         <!-- Tip: usa aside para contenido relacionado, pero no esencial -->
 
-        <!-- Sección con proyectos -->
         <section>
             <article>
                 <header>
@@ -131,7 +149,7 @@
                 <img 
                 style="width: 100%; aspect-ratio:953/438;"
                 loading="lazy"
-                src="/HTML+CSS/MiPortafolio/image/fortnite.png" 
+                src="/image/fortnite.png" 
                 alt="Cáptura de pantalla de la página web de Fortnite">
             </article>
 
@@ -147,9 +165,19 @@
 
             <article>
                 <header>
+                    <h4>Página promocional</h4>
+                </header>
+                <p>Landing page para mostrar los servicios de la empresa</p>
+                <footer>
+                    <small>Wordpress, APIs bancarias y reservas en línea</small>
+                </footer>
+            </article>
+
+            <article>
+                <header>
                     <h4>Clínica Digital de Gestión de Partos</h4>
                 </header>
-                <p>Clínica con procesos digitalizados para exportación de reportes.</p>
+                <p>Clínica con procesos digitalizados para exportación de reportes médicos.</p>
                 <footer>
                     <small>React (JavaScript), Django (API REST), Scrum</small>
                 </footer>
@@ -167,7 +195,6 @@
         </section>
         <!-- Tip: usa article para contenido independiente que podría publicarse por sí solo -->
 
-        <!-- Sección de preguntas frecuentes -->
         <section>
             <h2>Preguntas frecuentes</h2>
 
@@ -188,7 +215,6 @@
         </section>
         <!-- Tip: usa details para desplegar información secundaria sin recargar la interfaz -->
 
-        <!-- Formulario de contacto -->
         <section>
             <h2>Formulario de contacto</h2>
 
@@ -247,6 +273,7 @@
                 <button>Enviar contacto</button>
             </form>
         </section>
+        <!-- Tip: agrupa los campos en fieldset y usa labels asociadas para accesibilidad -->
     </main>
 
     <footer>

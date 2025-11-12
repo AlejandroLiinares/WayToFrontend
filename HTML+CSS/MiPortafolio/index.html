@@ -1,17 +1,10 @@
-<!-- Indica que el documento sigue el estándar HTML5 -->
+
 <!DOCTYPE html>
-<!-- Tip: siempre coloca esta línea al inicio para asegurar compatibilidad moderna -->
 
 <html lang="en">
-<!-- Define el idioma principal del contenido -->
-<!-- Tip: cambia “en” a “es” si el sitio es principalmente en español -->
 
     <head>
-        <!-- Contiene metadatos y configuraciones del documento -->
-        <!-- Tip: nada dentro del head se renderiza visualmente -->
-
         <meta charset="UTF-8">
-        <!-- Define el conjunto de caracteres, evita errores con tildes y símbolos -->
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Asegura diseño adaptable a móviles -->
@@ -26,17 +19,14 @@
         <meta property="og:description" content="Portafolio de Alejandro Linares, desarrollador de Software especializado en Frontend y con sólidas bases en Backend">
         <meta property="og:image" content="/image.png">
         <meta property="og:image:alt" content="Fotografía de Alejandro Linares">
-        <!-- Etiquetas Open Graph: optimizan la vista previa al compartir en redes sociales -->
 
         <link rel="alternate" href="https://alejandrolinares.dev/en" hreflang="es-GB">
         <link rel="canonical" href="https://alejandrolinares.dev">
         <!-- Indican versiones alternativas y la URL oficial de la página -->
 
         <meta name="robots" content="index, follow">
-        <!-- Permite que buscadores indexen y sigan los enlaces -->
 
         <meta name="theme-color" content="#09f">
-        <!-- Personaliza el color de la barra superior del navegador en móviles -->
 
         <link rel="icon" type="image/png" href="/HTML+CSS/MiPortafolio/image/yo.png">
         <!-- Define el ícono de la pestaña -->
@@ -46,36 +36,28 @@
                 background: #fff;
             }
         </style>
-        <!-- Tip: para proyectos reales, usa un archivo CSS externo -->
     </head>
 
 <body>
-<!-- Cuerpo principal visible de la página -->
 <!-- Tip: todo lo que el usuario ve va dentro del body -->
 
-    <!-- Encabezado principal del sitio -->
     <header>
         <h1>Portafolio de Alejandro Linares</h1>
 
-        <!-- Inserta un video de YouTube responsivo -->
         <iframe style="width: 100%; aspect-ratio:16/9;" 
         src="https://www.youtube.com/embed/3nYLTiY5skU?si=JUq4YCFtdXcwjX3O" 
         title="YouTube video player" frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <!-- Tip: usa aspect-ratio para mantener proporciones y evitar desbordes -->
 
-        <!-- Navegación del sitio -->
         <nav>
             <a href="#experiencia">Experiencia</a>
             <a href="#proyectos">Proyectos Realizados</a>
             <a href="https://www.linkedin.com/in/alejandroliinares/" target="_blank" rel="noreferrer">LinkedIn</a>
             <a href="https://www.github.com/alejandroliinares" target="_blank" rel="noreferrer">GitHub</a>
         </nav>
-        <!-- Tip: usa enlaces con texto descriptivo, no genérico como “clic aquí” -->
     </header>  
 
-    <!-- Inserta un video local o remoto -->
     <video autoplay muted src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
     <!-- Tip: usa atributos muted y autoplay juntos para evitar bloqueos del navegador -->
 
@@ -87,11 +69,9 @@
     </dialog>
     <!-- Tip: personalízalo con CSS, pero evita abusar del dialog para cosas complejas -->
 
-    <!-- Botón para abrir el modal -->
     <button id="show">Ver más información</button>
     <!-- Tip: usa nombres de id que indiquen acción o propósito -->
 
-    <!-- Script que controla la interacción del modal -->
     <script>
         const showButton = document.getElementById('show');
         const dialog = document.getElementById('dialog');
@@ -109,9 +89,8 @@
 
     <!-- Contenido principal del sitio -->
     <main>
-        <p>Un año de experiencia práctica como Desarrollador Full-Stack,<strong> especializado en FrontEnd</strong> desarrollando proyectos reales y funcionales, con una visión constante de aprendizaje.</p>
-        <!-- Tip: evita párrafos excesivamente largos, usa <strong> solo para resaltar palabras clave -->
-
+        <p>Un año de experiencia práctica como Desarrollador Full-Stack,<strong> especializado en FrontEnd</strong> 
+            desarrollando proyectos reales y funcionales, con una visión constante de aprendizaje.</p>
         <h2 id="experiencia">Experiencia</h2>
 
         <ul>
@@ -268,15 +247,12 @@
                 <button>Enviar contacto</button>
             </form>
         </section>
-        <!-- Tip: agrupa los campos en fieldset y usa labels asociadas para accesibilidad -->
     </main>
 
-    <!-- Pie de página del sitio -->
     <footer>
         Copyright © 2025 El portfolio hecho con más pasión
         <a href="mailto:alejandrolinaresnt@gmail.com">Envíame un correo</a>
         <a href="tel:+56972309444">Llámame</a>
     </footer>
-    <!-- Tip: el footer debe contener información final o enlaces de contacto -->
 </body>
 </html>
